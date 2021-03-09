@@ -1,16 +1,38 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>BestTrip</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+<head>
+  <title>BestTrip</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-  <body>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body>
+  <header class="header">
+    <div class="header-content">
+      <h3 class="header-content__title">BestTrip</h3>
+      <div class="header-content__nav">
+        <% if user_signed_in? %>
+        <ul>
+          <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+        </ul>
+        <% else %>
+        <ul>
+          <li><%= link_to "新規登録", new_user_registration_path %></li>
+          <li><%= link_to "ログイン", user_session_path %></li>
+        </ul>
+        <% end %>
+      </div>
+    </div>
+  </header>
+  <main>
     <%= yield %>
-  </body>
+  </main>
+  <footer></footer>
+</body>
+
 </html>

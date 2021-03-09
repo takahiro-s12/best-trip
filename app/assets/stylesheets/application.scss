@@ -13,3 +13,37 @@
  *= require_tree .
  *= require_self
  */
+
+/*サイト全体*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: 0 !important;
+}
+
+body {
+  width: 100%;
+  background-color: wheat;
+}
+
+main {
+  width: 1080px;
+  margin: 0 auto;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-clear {
+  clear: both;
+}
+
+/*header*/
+
+/*footer*/

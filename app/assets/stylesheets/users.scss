@@ -1,0 +1,38 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+/*show*/
+.profile {
+  width: 30%;
+  min-height: 500px;
+  height: auto !important;
+  height: 500px;
+  background-color: white;
+  text-align: center;
+  padding: 30px;
+  &__user-name {
+    padding: 20px;
+    border-bottom: solid 1px black;
+  }
+  &__user-introduction {
+    text-align: left;
+  }
+}
+
+.profile_image {
+  width: 30%;
+  border-radius: 50%;
+  border: solid 1px black;
+}
+
+/*edit*/
+
+.edit-profile {
+  padding: 50px 0;
+  text-align: center;
+  &__img {
+    width: 30%;
+    margin: 0 auto;
+  }
+}

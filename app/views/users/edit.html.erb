@@ -1,0 +1,21 @@
+<div class="edit-profile">
+  <h3>プロフィール編集</h3>
+  <%= form_with model:@user, local:true do |f| %>
+  <div class="edit-profile__img">
+    <%= attachment_image_tag @user, :profile_image, :fill, 60, 60, fallback: "no-image.png" %><br>
+    <%= f.attachment_field :profile_image %>
+  </div>
+  <div class="edit-profile__info">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="edit-profile__info">
+    <%= f.label :email %><br>
+    <%= f.email_field :email %>
+  </div>
+  <div class="edit-profile__info">
+    <%= f.label :introduction %><br>
+    <%= f.text_area :introduction %>
+  </div>
+  <% end %>
+</div>
