@@ -1,0 +1,24 @@
+<div class="profile float-left">
+  <%= render "users/profile" %>
+</div>
+<div class="new-post float-left">
+  <%= form_with model:@post, local:true do |f| %>
+  <div class="new-post-info">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="new-post-img float-left">
+    <%= attachment_image_tag @post, :main_image, :fill, 100, 100, fallback: "no-image.png" %><br>
+    <%= f.attachment_field :main_image %>
+  </div>
+  <div class="new-post-img float-left">
+    <%= attachment_image_tag @post, :sub_image, :fill, 100, 100, fallback: "no-image.png" %><br>
+    <%= f.attachment_field :sub_image %>
+  </div>
+  <div class="new-post-info float-clear">
+    <%= f.label :caption %><br>
+    <%= f.text_area :caption %>
+  </div>
+  <%= f.submit %>
+  <% end %>
+</div>

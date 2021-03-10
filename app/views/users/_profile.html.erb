@@ -1,0 +1,12 @@
+<div class="profile__image">
+  <%= attachment_image_tag current_user, :profile_image, :fill, 60, 60, fallback: "no-image.png" %>
+</div>
+<div class="profile__user-name">
+  <%= current_user.name %>
+</div>
+<div class="profile__user-introduction">
+  <%= current_user.introduction %>
+</div>
+<% if @user == current_user %>
+<%= link_to "プロフィール編集", edit_user_path(current_user) %>
+<% end %>
