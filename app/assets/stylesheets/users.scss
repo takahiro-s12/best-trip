@@ -17,6 +17,7 @@
   }
   &__user-introduction {
     text-align: left;
+    padding: 10px 0;
   }
 }
 
@@ -30,9 +31,26 @@
 
 .edit-profile {
   padding: 50px 0;
+  width: 50%;
+  margin: 0 auto;
   text-align: center;
-  &__img {
-    width: 30%;
-    margin: 0 auto;
+  background-color: white;
+  &__info {
+    padding-top: 20px;
   }
+  &__img {
+    width: 50%;
+    margin: 0 auto;
+    padding-top: 30px;
+  }
+}
+
+#user_name,
+#user_email,
+#user_introduction {
+  width: 80%;
+}
+
+#user_introduction {
+  height: 100px;
 }
